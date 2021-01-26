@@ -1,0 +1,68 @@
+@mixin blue_link_btn($w, $h, $jc)
+    background-color: $darkblue
+    border-radius: 30px
+    color: $white
+    font-size: 16px
+    display: flex
+    justify-content: $jc
+    align-items: center
+    text-align: center
+    text-transform: uppercase
+    width: $w
+    height: $h
+    text-decoration: none
+    line-height: 19px
+    &:hover
+        background-color: $darkblue
+        box-shadow: 0px 4px 15px rgba(27, 170, 235, 0.45)
+    &:active
+        background-color: $blue
+        box-shadow: none
+
+
+@mixin orange_link_btn($w, $h, $jc)
+    background-color: $orange
+    border-radius: 30px
+    font-size: 16px
+    line-height: 19px
+    display: flex
+    justify-content: $jc
+    align-items: center
+    text-align: center
+    text-transform: uppercase
+    width: $w
+    height: $h
+    text-decoration: none
+    &:hover
+        background-color: $orange
+        box-shadow: 0px 4px 20px rgba(255, 204, 0, 0.55)
+    &:active
+        background-color: $lightorange
+
+@mixin disabled_btn($w, $h, $jc)
+    border: 1px solid $grey
+    box-sizing: border-box
+    border-radius: 30px
+    font-size: 16px
+    line-height: 19px
+    display: flex
+    justify-content: $jc
+    align-items: center
+    text-align: center
+    text-transform: uppercase
+    width: $w
+    height: $h
+
+@mixin text_link()
+    font-size: 16px
+    line-height: 19px
+    text-decoration-line: underline
+    color: $text_link
+    &:hover
+        text-decoration-line: none
+    &:active
+        font-size: 16px
+        line-height: 19px
+        text-decoration-line: underline
+        color: $text_link
+        

@@ -1,0 +1,701 @@
+@import "mixins"
+@import "vars"
+
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Montserrat', sans-serif
+    max-width: 1366px
+    background-color: #ffffff
+    
+
+.page_1
+    background-image: url(../img/slider_img_1.png)
+
+.page_2
+    background-image: url(../img/slider_2.png)
+
+.page_3
+    background-image: url(../img/m_room-chair.png)
+
+.top_nav
+    img
+        padding:
+            top: 63px
+            left: 98px
+    &_menu
+        list-style: none
+        padding: 0
+        display: flex
+        flex-wrap: wrap
+        margin:
+            right: 140px
+            top: 50px
+        li
+            margin:
+                left: 25px
+            a
+                text-decoration: none
+                font-family: Montserrat
+                font-size: 14px
+                line-height: 48px
+                font-weight: 300
+                text-transform: uppercase
+                letter-spacing: 0.1em
+                color: $grey
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 3px
+                    background-color: $darck
+                    transform: translateY(1px) scale(0)
+                    transition: all 0.6s
+                &:hover
+                    color: $darck
+                    text-shadow:  1px 0 0 #212121
+                    text-decoration
+                    &::after
+                        transform: translateY(1px) scale(1)
+
+.wrap
+    position: absolute
+    top: 67%
+    left: 85%
+    transform: translate(-50%, -50%)
+    width: 0px
+    height: 30px
+    line-height: 27px
+    border-radius: 5px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+    transition: all 0.5s ease
+
+.input
+    border: 0
+    background: transparent
+    width: 0%
+    outline: none
+    font-family: sans-serif
+    font-size: 18px
+    color: $darck
+    font-style: italic
+    transition: all 0.3s ease
+    position: relative
+    padding-top: 1px
+
+.wrap .fa
+    color: $grey
+    position: absolute
+    right: 17px
+    top: 4px
+    font-size: 22px
+    cursor: pointer
+    &:hover
+        color: $darck
+
+.wrap.active
+    width: 165px
+    padding-left: 10px
+    transition: all 0.5s ease
+    background-color: #ffffff
+    opacity: 0.6
+    top: 100px
+    left: 78%
+
+.input.active
+    width: 98%
+    transition: all 0.5s 0.8s ease
+
+input::placeholder 
+    color: #fff
+
+.info_trending
+    margin-left: 98px
+    margin-top: 235px
+    max-width: 490px
+
+.top_text_1
+    @include topText($blue)
+
+.top_text_2
+    @include topText($green)
+
+.top_text_3
+    @include topText($red)
+
+.main_text
+    @include bigText
+    margin-top: 22px
+
+.info_text
+    @include paragaph (14px, 24px)
+
+a.order_btn
+    @include btnBig
+    margin-bottom: 185px
+
+.light
+        color: #ffffff
+
+.carousel-indicators li
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-color: #c7c7c7
+    margin: 5px
+
+.carousel-indicators .active
+    width: 40px
+    height: 40px
+    margin-top: 0
+    background-color: #212121
+
+.items
+    padding: 0 98px
+    margin-top: 120px
+    max-width: 1366px
+
+.featured_menu
+    list-style: none
+    padding: 0
+    display: flex
+    .step
+        margin: 
+            left: 0
+    li
+        margin:
+            left: 31px
+        a
+            text-decoration: none
+            font-family: Montserrat
+            font-size: 36px
+            font-weight: 700
+            line-height: 48px
+            color: $grey
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 3px
+                background-color: $darck
+                transform: translateY(1px) scale(0)
+                transition: all 0.6s
+            &:hover
+                color: $darck
+                text-decoration
+                &::after
+                    transform: translateY(5px) scale(1)
+
+.explore_btn
+    @include explore
+    margin-top: 15px
+
+.item_list
+    margin-top: 50px
+    position: relative
+    img
+        width: 270px
+        height: 270px
+
+
+.item_list_hover
+    background-image: url(../img/arrow-back.svg)
+    position: absolute
+    top: 50px
+    width: 270px
+    height: 270px
+    outline: 1px solid #9c9c9c
+    background-color: #ffffff
+    opacity: 0
+    text-align: center
+    &:hover
+        opacity: 0.9
+        transition: all 0.3s
+    &_btn
+        @include btnRound
+        margin-top: 62px
+
+    &_text
+        padding-top: 19px
+        color: #212121
+        font-family: Montserrat
+        font-size: 22px
+        font-weight: 700
+        line-height: 29.88px
+    &_parag
+        padding-top: 20px
+        color: #6c6c6c
+        font-family: Montserrat
+        font-size: 14px
+        font-weight: 300
+        line-height: 21.91px
+
+.exclusive_1
+    background-image: url(../img/promo_img1.png)
+    width: 683px
+    height: 683px
+    margin-top: 120px
+    &_top
+        @include topText ($blue)
+        padding: 
+            top: 195px
+            left: 51px
+    &_text
+        @include exclusive_text
+        padding: 
+            top: 18px
+            left: 52px
+    &_paragraph
+        @include paragaph (14px, 24.04px)
+        width: 432px
+        height: 45px
+        padding-left: 50px
+
+a.exclusive_1_btn
+    @include btnBig
+    margin:
+        left: 50px
+        top: 65px
+
+.exclusive_2
+    background-image: url(../img/promo_img_12.png)
+    width: 683px
+    height: 683px
+    margin-top: 120px
+    &_top
+        @include topText ($blue)
+        padding: 
+            top: 195px
+            left: 51px
+    &_text
+        @include exclusive_text
+        padding: 
+            top: 18px
+            left: 52px
+    &_paragraph
+        @include paragaph (14px, 24.04px)
+        height: 45px
+        width: 432px
+        padding-left: 50px
+
+a.exclusive_2_btn
+    @include btnBig
+    margin:
+        left: 50px
+        top: 65px
+
+.trending
+    margin-top: 119px
+    &_top
+        color: #212121
+        font-family: Montserrat
+        font-size: 36px
+        font-weight: 700
+    &_items
+        margin-top: 34px
+        img
+            margin-top: 30px
+
+.all_img
+    margin-top: 90px
+    img
+        margin-top: 30px
+
+.trending_item_exclusive
+    &_main
+        margin-top: 120px
+        background-image: url(../img/product_1_lg_66.png)
+        width: 570px
+        height: 570px
+        padding-left: 32px
+        &_top
+            @include topText ($blue)
+            padding-top: 170px
+        &_text
+            @include exclusive_text
+            padding:
+                left: 1px
+                top: 18px
+        &_paragraph
+            @include paragaph (14px , 24.04px)
+            padding-top: 18px
+            width: 340px
+        &_btn
+            @include btnBig
+
+.mobile
+    margin-top: 120px
+
+.mobile_cont
+    background-image: url(../img/back_img_44.png)
+    width: 1366px
+    height: 516px
+    padding-left: 99px
+    &_top
+        font-family: Montserrat
+        font-size: 18px
+        font-weight: 700
+        line-height: 48px
+        text-transform: uppercase
+        letter-spacing: 1.8px
+        margin-bottom: 0
+        padding-top: 115px
+        color: $grey
+    &_text
+        padding:
+            left: 7px
+        @include bigText
+        width: 480px
+    &_paragraph
+        @include paragaph (22px, 24px)
+        padding-top: 0
+    &_app
+        padding:
+            left: 1px
+            top: 33px
+
+.google
+    padding-left: 10px
+
+.footer
+    background-color: #f7f7f7
+    &_cont
+        padding:
+            top: 120px
+            left: 97px
+            right: 105px
+
+.footer_cont_left
+    &_top
+        @include footer_top
+    &_text
+        @include footer_little_text
+
+.useful_inf
+    display: flex
+    flex-wrap: wrap
+
+.information_1
+    display: flex
+    flex-direction: column
+
+.information_2
+    display: flex
+    flex-direction: column
+    padding-left: 50px
+
+.footer_cont_center
+    &_top
+        @include footer_top
+
+.useful_inf a
+    @include footer_bold_text
+    text-decoration: none
+
+    
+.footer_cont_right
+    width: 375px
+    &_top
+        @include footer_top
+    &_parag
+        @include footer_little_text
+
+.form-control
+    height: 48px
+    border: 1px solid #d9dee1
+    border-right: none
+    background-color: #ffffff
+    border-radius: 0
+    width: 128px
+    color: #6c6c6c
+    font-family: Montserrat
+    font-size: 14px
+    font-weight: 300
+    line-height: 22px
+    height: 48px
+
+.btn
+    border: 1px solid #d9dee1
+    border-left: none
+    height: 48p
+    background-color: #ffffff
+    border-radius: 0
+
+.bottom_footer
+    margin-top: 58px
+
+.copyright
+    @include footer_copyright_text
+
+.terms
+    @include footer_copyright_text
+    a
+        @include footer_copyright_text
+        &:hover
+            text-decoration: none
+            color: $darck
+        &:active
+            color: lighten($darck, 20%)
+
+.social_icons
+    display: flex
+    a
+        width: 28px
+        height: 28px
+        background-color: $grey
+        color: #ffffff
+        padding-top: 3px
+        text-align: center
+        border-radius: 50px
+        margin-left: 5px
+        &:hover
+            color: $darck
+        &:active
+            color: lighten($darck, 20%)
+
+/*contact*/
+.contact_header_page
+    background-color: #f5f5f5
+
+.contact_top_text
+    @include contBigText
+    margin: 
+        left: 101px
+        top: 130px
+        bottom: 45px
+    
+.contact_content
+    margin: 41px 98px 122px 98px
+
+.contact_items
+    width: 370px
+    height: 370px
+    border: 1px solid #9c9c9c
+    background-color: #ffffff
+    opacity: 0.9
+    text-align: center
+    margin-top: 30px
+    .fa
+        color: $darck
+        padding-top: 48px
+        margin: 0
+    &_top
+        @include contBigText
+        padding-top: 34px
+        margin: 0
+    &_contacts
+        padding-top: 13px
+        @include boldTextContGrey($grey)
+        margin: 0
+    &_dots
+        @include boldTextContGrey($darck)
+        margin: 0
+    &_foot
+        color: #6c6c6c
+        font-family: Montserrat
+        font-size: 14px
+        font-weight: 300
+        line-height: 20px
+
+.product_content
+    padding: 
+        left: 98px
+        right: 98px
+
+.product_menu
+    list-style: none
+    padding: 0
+    display: flex
+    margin:
+        top: 71px
+    .step_1
+        position: relative
+        margin-bottom: 42px
+        a
+            text-decoration: none
+            font-family: Montserrat
+            font-size: 18px
+            font-weight: 700
+            line-height: 48px
+            color: $grey
+            padding-right: 45px
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 3px
+                background-color: $darck
+                transform: translateY(1px) scale(0)
+                transition: all 0.6s
+                position: absolute
+                left: -10px
+            &:hover
+                color: $darck
+                text-decoration
+                &::after
+                    transform: translateY(19px) scale(1)
+
+.product_items img
+    margin-top: 30px
+
+.refresh
+    margin:
+        top: 71px
+        left: 48%
+        
+button
+    outline: none !important
+    border: none
+    background-color: #ffffff
+
+input 
+    display: none
+
+label
+    display: block
+    width: 40px
+    height: 40px
+    font-size: 36px
+    text-align: center
+    line-height: 40px
+    transition: transform .5s
+    transform: rotate(180deg)
+    cursor: pointer
+
+input:checked + label
+    transform: rotate(-180deg)
+
+/*product_details_page*/
+
+.product_detail_items
+    margin-bottom: 120px
+
+.product_detail_content
+    background-color: #f4f4f4
+
+.product_detail_menu
+    margin-top: 25px
+    list-style: none
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+    .step_1
+        position: relative
+        a
+            text-decoration: none
+            font-family: Montserrat
+            font-size: 18px
+            font-weight: 700
+            line-height: 48px
+            color: $grey
+            padding-right: 45px
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 3px
+                background-color: $darck
+                transform: translateY(1px) scale(0)
+                transition: all 0.2s
+                position: absolute
+                left: -10px
+            &:hover
+                color: $darck
+                text-decoration
+                &::after
+                    transform: translateY(10px) scale(1)
+
+.product_detail_item
+    padding: 0 98px
+    margin:
+        top: 72px
+        bottom: 245px
+
+/*carouselle*/
+
+input[name="img"]
+    display: none
+
+.wrapper
+    margin: 0 auto
+    overflow: hidden
+    height: 655px
+    width: 570px
+    
+
+.gallery
+    margin: 0 auto
+    width: 570px
+    height: 570px
+    position: relative
+    line-height: 0
+    background-size: auto 100%
+    background: no-repeat 50% 0
+    padding-left: 150px
+
+.gallery label 
+    display: inline-block
+    width: 70px
+    height: 70px
+    margin-top: 581px
+    margin-left: 10px
+    background: no-repeat 50% 50%
+    background-image: none
+    background-size: auto
+    background-size: calc(100% - 4px) calc(100% - 4px)
+    cursor: pointer
+    opacity: 0.3
+
+#img1:checked ~ .gallery label:nth-of-type(1),
+#img2:checked ~ .gallery label:nth-of-type(2),
+#img3:checked ~ .gallery label:nth-of-type(3)
+    opacity: 1
+
+#img1:checked ~ .gallery, .gallery label:nth-of-type(1)
+    background-image: url(../img/slider1.png)
+
+#img2:checked ~ .gallery,
+.gallery label:nth-of-type(2) 
+    background-image: url(../img/slider2.jpg)
+
+#img3:checked ~ .gallery,
+.gallery label:nth-of-type(3) 
+    background-image: url(../img/slider3.jpg)
+
+/*carouselle end*/
+.prod_detail_deal
+    text-align: center
+    margin-top: 47px
+    width: 510px
+    &_text
+        @include exclusive_text
+    &_hot_deal
+        @include topText (#e53935)
+        margin-bottom: 36px
+    &_price
+        color: #212121
+        font-weight: 300
+        line-height: 48.02px
+        font-size: 48px
+        text-transform: uppercase
+        &_price
+            font-size: 72px
+        &_amount
+            font-size: 36px
+    &_txt
+        @include paragaph (16px, 24.01px)
+        text-align: start
+
+.buy_btn
+    @include buy_btn
+    margin:
+        top: 25px
+        bottom: 20px
+
+.product_detail_items
+    padding: 0 98px
+
+.mif
+    margin-top: 65px

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2ec2bb5da1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="top__content">
+        <header style="background-image: url(./img/bg1.png)" class="header center">
+            <a href="index.html" class="header__logo">
+                <img class="header_img" src="./img/small_logo.png" alt="header_logo">
+            </a>
+            <input id="switcher" type="checkbox">
+            <label class="open" for="switcher"><i class="fas fa-bars"></i></label>
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="menu__list"><a href="#" class="menu__link">Главная</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Описание</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Преимущества</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Отзывы</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Партнёры</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Гарантии</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">FAQ</a></li>
+                </ul>
+                <label class="nav__close" for="switcher"><i class="fa fa-times"></i></label>
+                <a class="nav__logo" href="index.html"><img src="./img/dark_logo.png" alt="nav_logo"></a>
+                <div class="questions">
+                    <div class="questions__top">ОСТАЛИСЬ ВОПРОСЫ ?</div>
+                    <form action="" class="questions__form">
+                        <input class="questions__input" type="text" name="tel" id="#" placeholder="Ваш телефон"
+                            pattern="\-?\d+(\.\d{0,})?"
+                            oninput="this.value = this.value.replace(/[^0-9\-.|,]|([0-9\-.|,]+)-|(\.[0-9]*)\.|(^-?0)0|^\./, '$1$2$3')">
+                        <label for="tel"><button class="questions__btn" type="submit">заказать звонок</button>
+                            <input class="questions__check" type="checkbox" name="tel" id="guest2"><label
+                                class="questions__about" class="guest__check" for="guest2">
+                                Я согласен на обработку персональных данных
+                            </label></label>
+                    </form>
+                    <div class="social">
+                        <div class="social__list"><a class="social__link" href="#"><i class="fab fa-vk"></i></a>
+                        </div>
+                        <div class="social__list"><a class="social__link" href="#"><i
+                                    class="fab fa-instagram-square"></i></a></div>
+                        <div class="social__list"><a class="social__link" href="#"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blur"></div>
+            </nav>
+        </header>
+
+
+        <div class="box center">
+            <h2 class="box__top">ПРИДУМАЙТЕ ЧТО ОТПРАВИТЬ</h2>
+            <p class="box__parag">А посылка доедет сама</p>
+            <a class="send__link" href="#">отправить посылку</a>
+        </div>
+    </section>
+
+    <section class="send center">
+        <div style="background-image: url(./img/Group3.png);" class="send__img"></div>
+        <div class="send__block">
+            <h2 class="send__top">Мы – агрегатор служб доставки</h2>
+            <p class="send__parag">С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши услуги
+                бесплатны,
+                так
+                как мы получаем бонусы от служб доставок за предоставленный объем заказов, а вы получаете надежный
+                сервис в
+                подарок!</p>
+            <a class="send__link" href="#">отправить посылку</a>
+        </div>
+    </section>
+    <div class="content center">
+        <div class="step">
+            <div class="step__content">
+                <div style="background-image: url(./img/1.png);" class="step__block step__block_1"></div>
+                <h2 class="step__top">Шаг 1</h2>
+                <p class="step__parag">Придумайте что и кому отправить</p>
+            </div>
+            <div class="step__content">
+                <div style="background-image: url(./img/2.png);" class="step__block step__block_2"></div>
+                <h2 class="step__top">Шаг 2</h2>
+                <p class="step__parag">Создайте заявку на сайте SendIt - Ваш персональный менеджер позвонит и
+                    подтвердит
+                    запрос, уточнит все необходимые данные</p>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step__content">
+                <div style="background-image: url(./img/3.png);" class="step__block step__block_3"></div>
+                <h2 class="step__top">Шаг 3</h2>
+                <p class="step__parag">К Вам приезжает курьер, забирает посылку, Вы подписываете один документ</p>
+            </div>
+            <div class="step__content">
+                <div style="background-image: url(./img/4.png);" class="step__block step__block_4"></div>
+                <h2 class="step__top">Шаг 4</h2>
+                <p class="step__parag">Вы ждёте подтверждения доставки, слова радости и благодарности от адресата :)
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom center">
+        <h3 class="bottom__top">Мы берём все заботы по доставке на себя!</h3>
+        <a class="send__link" href="#">отправить посылку</a>
+    </div>
+
+    <div class="call center">
+        <div class="call__left">
+            <h3 class="call__heading">хотите мы вам перезвоним?</h3>
+            <p class="call__text">Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
+        </div>
+        <div class="call_right">
+            <form action="#" class="call__form">
+                <input type="tel" name="tel" id="#" placeholder="Ваш телефон" class="call__tel"
+                    pattern="\-?\d+(\.\d{0,})?"
+                    oninput="this.value = this.value.replace(/[^0-9\-.|,]|([0-9\-.|,]+)-|(\.[0-9]*)\.|(^-?0)0|^\./, '$1$2$3')">
+                <a href="#openModal" class="call__button">заказать звонок</a>
+                <div class="form__check">
+                    <input class="radio__check" type="radio" name="guest" id="guest1">
+                    <label class="guest__check" for="guest1">
+                        Я согласен на обработку персональных данных
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="openModal" class="modalDialog">
+        <div class="modal">
+            <a href="#close" title="Закрыть" class="modal__close">X</i></a>
+            <h1 class="modal__heading">Оставьте заявку, и мы Вам перезвоним!</h1>
+            <input type="text" name="#" id="#" class="modal__name" placeholder="Ваше имя">
+            <input type="tel" name="#" id="#" class="modal__tel" placeholder="Ваш телефон" pattern="\-?\d+(\.\d{0,})?"
+                oninput="this.value = this.value.replace(/[^0-9\-.|,]|([0-9\-.|,]+)-|(\.[0-9]*)\.|(^-?0)0|^\./, '$1$2$3')">
+            <button class="modal__btn" type="button">заказать звонок</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="feedback center">
+        <h1 class="feedback__heading">ОТЗЫВЫ</h1>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="slide">
+                    <div class="slide__top">
+                        <img src="./img/image.png" alt="user1" class="slide__img">
+                        <div class="slide__block">
+                            <h2 class="slide__name">Дарья</h2>
+                            <h3 class="slide__company">La Intuicion</h3>
+                            <p class="slide__text">Посылка: товары <br>Откуда: Москва <br>Куда: Нижневартовск</p>
+                        </div>
+                    </div>
+                    <div class="slide__bottom">
+                        <p class="slide__parag">Отличный и качественный сервис.
+                            Долго искали курьерскую службу для доставки наших товаров. Решили попробовать и были
+                            приятно
+                            удивлены, что помимо удобного сайта, компания предоставляет доступ в личный кабинет, где
+                            реализованы многие наши потребности (ведение адресной базы, выбор и вызов курьера в пару
+                            кликов).</p>
+                    </div>
+                </div>
+                <div class="slide hide">
+                    <div class="slide__top">
+                        <img src="./img/image (1).png" alt="user1" class="slide__img">
+                        <div class="slide__block">
+                            <h2 class="slide__name">Елена</h2>
+                            <h3 class="slide__company">Global Logic</h3>
+                            <p class="slide__text">Посылка: товары<br>Откуда: Москва<br>Куда: Калининград</p>
+                        </div>
+                    </div>
+                    <div class="slide__bottom">
+                        <p class="slide__parag">Мне нравится работать с SendIt, потому что это удобно: моментальный
+                            расчет
+                            стоимости доставки, удобный сайт, выборка среди основных надёжных логистических компаний
+                            и
+                            самый
+                            значимый фактор – всё это можно оперативно организовать и не волноваться. И ещё хочу
+                            сказать
+                            спасибо менеджеру за отзывчивость.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="slide">
+                    <div class="slide__top">
+                        <img src="./img/image (1).png" alt="user1" class="slide__img">
+                        <div class="slide__block">
+                            <h2 class="slide__name">Елена</h2>
+                            <h3 class="slide__company">Global Logic</h3>
+                            <p class="slide__text">Посылка: товары<br>Откуда: Москва<br>Куда: Калининград</p>
+                        </div>
+                    </div>
+                    <div class="slide__bottom">
+                        <p class="slide__parag">Мне нравится работать с SendIt, потому что это удобно: моментальный
+                            расчет
+                            стоимости доставки, удобный сайт, выборка среди основных надёжных логистических компаний
+                            и
+                            самый
+                            значимый фактор – всё это можно оперативно организовать и не волноваться. И ещё хочу
+                            сказать
+                            спасибо менеджеру за отзывчивость.</p>
+                    </div>
+                </div>
+                <div class="slide hide">
+                    <div class="slide__top">
+                        <img src="./img/image.png" alt="user1" class="slide__img">
+                        <div class="slide__block">
+                            <h2 class="slide__name">Дарья</h2>
+                            <h3 class="slide__company">La Intuicion</h3>
+                            <p class="slide__text">Посылка: товары <br>Откуда: Москва <br>Куда: Нижневартовск</p>
+                        </div>
+                    </div>
+                    <div class="slide__bottom ">
+                        <p class="slide__parag">Отличный и качественный сервис.
+                            Долго искали курьерскую службу для доставки наших товаров. Решили попробовать и были
+                            приятно
+                            удивлены, что помимо удобного сайта, компания предоставляет доступ в личный кабинет, где
+                            реализованы многие наши потребности (ведение адресной базы, выбор и вызов курьера в пару
+                            кликов).</p>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="cools center">
+        <h1 class="cools__heading">НАШИ ПРЕИМУЩЕСТВА</h1>
+        <div class="cools__container">
+            <div class="cools__block">
+                <div class="cools__img"><img src="./img/Layer 3.png" alt="cools1"></div>
+                <p class="cools__text">Бесплатный сервис</p>
+            </div>
+            <div class="cools__block">
+                <div class="cools__img"><img src="./img/Layer 1.png" alt="cools2"></div>
+                <p class="cools__text">Огромный выбор вариантов доставки</p>
+            </div>
+            <div class="cools__block">
+                <div class="cools__img"><img src="./img/Layer 6.png" alt="cools3"></div>
+                <p class="cools__text">4 параметра лучшего предложения</p>
+            </div>
+            <div class="cools__block">
+                <div class="cools__img"><img src="./img/Layer 5.png" alt="cools4"></div>
+                <p class="cools__text">Удобство заказа</p>
+            </div>
+            <div class="cools__block">
+                <div class="cools__img"><img src="./img/Layer 2.png" alt="cools5"></div>
+                <p class="cools__text">Online-поддержка</p>
+            </div>
+            <div class="cools__block">
+                <div class="cools__img"><img src="./img/Layer 4.png" alt="cools6"></div>
+                <p class="cools__text">Единый номер отслеживания</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="warranty center">
+        <h1 class="warranty__heading">НАШИ ГАРАНТИИ</h1>
+        <div class="slideshow-container">
+            <div class="mySlide fade">
+                <div class="slider">
+                    <div class="slider__top">
+                        <div class="slider__img"><img src="./img/Forma 1.png" alt="warranty_img1"></div>
+                        <h3 class="slider__heading">Страховка отправлений</h3>
+                    </div>
+                    <div class="slider__bottom">Контроль работы курьеров в онлайн режиме. Страхование по запросу
+                        клиента
+                        Каждый куръер находится под пристальным вниманием менеджеров SendIt
+                    </div>
+                    <a class="slider__btn" href="#">подробнее</a>
+                </div>
+                <div class="slider hide">
+                    <div class="slider__top">
+                        <div class="slider__img"><img src="./img/Forma 1-2.png" alt="warranty_img2"></div>
+                        <h3 class="slider__heading">Прозрачность расчетов</h3>
+                    </div>
+                    <div class="slider__bottom">Чтобы узнать точную стоимость отправления вам не нужно связываться с
+                        каждой курьерской службой в отдельности и сравнивать полученные предложения, просто
+                        воспользуйтесь нашим сервисом
+                    </div>
+                    <a class="slider__btn" href="#">подробнее</a>
+                </div>
+                <div class="slider hide">
+                    <div class="slider__top">
+                        <div class="slider__img"><img src="./img/Forma 1-1.png" alt="warranty_img3"></div>
+                        <h3 class="slider__heading">Лучшие поставщики</h3>
+                    </div>
+                    <div class="slider__bottom">Мы работаем с самыми надежными и известными операторами доставки.
+                        Проверка надежности курьерской компании, экспертная оценка качества предоставляемых услуг
+                    </div>
+                    <a class="slider__btn" href="#">подробнее</a>
+                </div>
+            </div>
+            <div class="mySlide fade">
+                <div class="slider">
+                    <div class="slider__top">
+                        <div class="slider__img"><img src="./img/Forma 1-2.png" alt="warranty_img2"></div>
+                        <h3 class="slider__heading">Прозрачность расчетов</h3>
+                    </div>
+                    <div class="slider__bottom">Чтобы узнать точную стоимость отправления вам не нужно связываться с
+                        каждой курьерской службой в отдельности и сравнивать полученные предложения, просто
+                        воспользуйтесь нашим сервисом
+                    </div>
+                    <a class="slider__btn" href="#">подробнее</a>
+                </div>
+            </div>
+            <div class="mySlide fade">
+                <div class="slider">
+                    <div class="slider__top">
+                        <div class="slider__img"><img src="./img/Forma 1-1.png" alt="warranty_img3"></div>
+                        <h3 class="slider__heading">Лучшие поставщики</h3>
+                    </div>
+                    <div class="slider__bottom">Мы работаем с самыми надежными и известными операторами доставки.
+                        Проверка надежности курьерской компании, экспертная оценка качества предоставляемых услуг
+                    </div>
+                    <a class="slider__btn" href="#">подробнее</a>
+                </div>
+            </div>
+            <a class="forward" onclick="plusSlide(-1)">&#10094;</a>
+            <a class="back" onclick="plusSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <div class="doubts center">
+        <h1 class="doubts__heading">ОСТАЛИСЬ СОМНЕНИЯ?</h1>
+        <div class="doubts__container">
+            <div class="doubts__flex">
+                <details class="details">
+                    <div class="fg">Lorem ipsum
+                        dolor, sit amet consectetur adipisicing elit. Cumque, excepturi!</div>
+                    <summary class="summary">На бумажную волокиту уйдёт много времени, а мне нужно доставить срочно!
+                    </summary>
+                </details>
+
+                <details class="details">
+                    <div class="fg">Lorem ipsum
+                        dolor, sit amet consectetur adipisicing elit. Cumque, excepturi!</div>
+                    <summary class="summary">Мне необходимо совершить доставку по нескольким адресам, нужно много
+                        чего
+                        заполнять
+                    </summary>
+                </details>
+
+                <details class="details">
+                    <div class="fg">Lorem ipsum
+                        dolor, sit amet consectetur adipisicing elit. Cumque, excepturi!</div>
+                    <summary class="summary">Вы не сможете доставить посылку за границу
+                    </summary>
+                </details>
+            </div>
+
+            <div class="doubts__flex fix">
+                <details class="details">
+                    <div class="fg">Lorem ipsum
+                        dolor, sit amet consectetur adipisicing elit. Cumque, excepturi!</div>
+                    <summary class="summary">Вы не занимаетесь такими простыми грузами, как мебель
+                    </summary>
+                </details>
+
+                <details class="details">
+                    <div class="fg">Lorem ipsum
+                        dolor, sit amet consectetur adipisicing elit. Cumque, excepturi!</div>
+                    <summary class="summary">Я отправляю вместе с коллегами, мы можем легко запутаться где чьё
+                    </summary>
+                </details>
+
+                <details class="details">
+                    <div class="fg"> Это не так. Вам нужно заполнить и подписать всего один документ, который
+                        распространяется на все службы доставки, которые будут доставлять вашу посылку</div>
+                    <summary class="summary">Нужно заполнять кучу документов
+                    </summary>
+                </details>
+            </div>
+        </div>
+    </div>
+
+    <div class="brand center">
+        <div class="slideshow-container">
+            <div class="mySlid fade">
+                <div class="slid">
+                    <a href="#"><img src="./img/bringo.png" alt="bringo"></a>
+                </div>
+                <div class="slid">
+                    <a href="#"><img src="./img/cdek.png" alt="cdek"></a>
+                </div>
+                <div class="slid">
+                    <a href="#"><img src="./img/city_express.png" alt="city"></a>
+                </div>
+                <div class="slid">
+                    <a href="#"><img src="./img/dpd.png" alt="dpd"></a>
+                </div>
+                <div class="slid">
+                    <a href="#"><img src="./img/pony.png" alt="pony"></a>
+                </div>
+                <div class="slid">
+                    <a href="#"><img src="./img/spsr.png" alt="spsr"></a>
+                </div>
+                <div class="slid hide">
+                    <a href="#"><img src="./img/tnt.png" alt="tnt"></a>
+                </div>
+                <div class="slid hide">
+                    <a href="#"><img src="./img/ups.png" alt="ups"></a>
+                </div>
+            </div>
+            <div class="mySlid fade">
+                <div class="slid">
+                    <a href="#"><img src="./img/tnt.png" alt="tnt"></a>
+                </div>
+                <div class="slid">
+                    <a href="#"><img src="./img/ups.png" alt="ups"></a>
+                </div>
+            </div>
+
+            <a class="left" onclick="plusSlid(-1)">&#10094;</a>
+            <a class="right" onclick="plusSlid(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <footer class="footer center">
+        <div class="footer__top">
+            <h1 class="footer__heading">ОСТАЛИСЬ ВОПРОСЫ?</h1>
+            <form action="#" class="footer__form">
+                <input class="footer__input" type="tel" name="tel" id="#" placeholder="Ваш телефон" pattern="\-?\d+(\.\d{0,})?"
+                oninput="this.value = this.value.replace(/[^0-9\-.|,]|([0-9\-.|,]+)-|(\.[0-9]*)\.|(^-?0)0|^\./, '$1$2$3')">
+                <label for="telef">
+                    <button class="footer__btn footer__btn_hide1" type="button">заказать звонок</button>
+                    <form action="#" class="footer__check">
+                        <input class="radio__checks" type="radio" name="guest" id="guest3">
+                        <label class="guest__checks" for="guest3">
+                            Я согласен на обработку персональных данных
+                        </label>
+                    </form>
+                </label>
+                <button class="footer__btn footer__btn_hide" type="button">заказать звонок</button>
+            </form>
+        </div>
+
+
+        <div class="footer__menu">
+            <a href="index.html" class="footer__menu__logo">
+                <img class="footer_img" src="./img/dark_logo.png" alt="footer_logo">
+            </a>
+            <input id="switch" type="checkbox">
+            <label class="opens" for="switch"><i class="fas fa-bars darck"></i></label>
+            <nav class="navs">
+                <ul class="menus">
+                    <li class="menus__list"><a href="#" class="menus__link">Главная</a></li>
+                    <li class="menus__list"><a href="#" class="menus__link">Описание</a></li>
+                    <li class="menus__list"><a href="#" class="menus__link">Преимущества</a></li>
+                    <li class="menus__list"><a href="#" class="menus__link">Отзывы</a></li>
+                    <li class="menus__list"><a href="#" class="menus__link">Партнёры</a></li>
+                    <li class="menus__list"><a href="#" class="menus__link">Гарантии</a></li>
+                    <li class="menus__list"><a href="#" class="menus__link">FAQ</a></li>
+                </ul>
+                <label class="navs__closed" for="switch"><i class="fa fa-times"></i></label>
+                <div class="blur new_blur"></div>
+            </nav>
+        </div>
+
+
+        <div class="copyright">
+            <div class="copyright__copy copyright__font">© Сами копипастим и вам разрешаем</div>
+
+            <div class="copyright__list hidden"><a class="copyright__link" href="#"><i class="fab fa-vk"></i></a>
+            </div>
+            <div class="copyright__list hidden"><a class="copyright__link" href="#"><i
+                        class="fab fa-instagram-square"></i></a></div>
+            <div class="copyright__list hidden"><a class="copyright__link" href="#"><i
+                        class="fab fa-facebook-f"></i></a></div>
+
+            <div class="copyright__date copyright__font">
+                <script>
+                    document.write(new Date()
+                        .getFullYear());
+                </script>
+            </div>
+            <div class="copyright__autor copyright__font">Задизайнено мной</div>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
+
+<script>
+    var slideInd = 1;
+    showSlide(slideInd);
+
+    function plusSlide(n) {
+        showSlide(slideInd += n);
+    }
+
+    function currentSlide(n) {
+        showSlide(slideInd = n);
+    }
+
+    function showSlide(n) {
+        var i;
+        var slide = document.getElementsByClassName("mySlide");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slide.length) {
+            slideInd = 1
+        }
+        if (n < 1) {
+            slideInd = slide.length
+        }
+        for (i = 0; i < slide.length; i++) {
+            slide[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slide[slideInd - 1].style.display = "flex";
+        dots[slideInd - 1].className += " active";
+    }
+</script>
+
+<script>
+    var slideIn = 1;
+    showSlid(slideIn);
+
+    function plusSlid(n) {
+        showSlid(slideIn += n);
+    }
+
+    function currentSlid(n) {
+        showSlid(slideIn = n);
+    }
+
+    function showSlid(n) {
+        var i;
+        var slid = document.getElementsByClassName("mySlid");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slid.length) {
+            slideIn = 1
+        }
+        if (n < 1) {
+            slideIn = slid.length
+        }
+        for (i = 0; i < slid.length; i++) {
+            slid[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slid[slideIn - 1].style.display = "flex";
+        dots[slideIn - 1].className += " active";
+    }
+</script>
+
+</html>

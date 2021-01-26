@@ -1,0 +1,831 @@
+@import "mixins"
+@import "vars"
+
+body
+    font-family: Lato, sans-serif
+
+p, h1, h2, h3, h4, h5, h6
+    margin: 0
+
+.container
+    margin: 0 auto
+    padding: 0
+    
+.main_page
+    background-image: url(../img/layer_2_3.png)
+    background-repeat: no-repeat
+    &_content
+        background-image: url(../img/main_bg.png)
+        max-width: 1198px
+        height: 654px
+        margin: 0 101px
+        &_nav
+            display: flex
+            flex-wrap: wrap
+            list-style-type: none
+            padding: 
+                top: 60px
+                left: 6px
+            &_list a
+                font-size: 18px
+                line-height: 1.2
+                font-weight: 400
+                color: $goldColor
+                text-decoration: none
+                margin-left: 37px
+                padding: 10px
+                position: relative
+                &::after
+                    position: absolute
+                    content: ''
+                    display: block
+                    width: 85%
+                    left: 10px
+                    height: 1px
+                    background-color: $goldColor
+                    transform: translateY(1px) scale(0)
+                    transition: all 0.3s
+                &:hover
+                    color: #ffffff
+                    text-shadow:  1px 0 0 #212121
+                    text-decoration
+                    &::after
+                        transform: translateY(1px) scale(1)
+                &:active
+                    color: $goldColor
+        &_motto
+            padding: 
+                top: 70px
+                left: 46px
+            font-size: 60px
+            line-height: 48px
+            font-weight: 700
+            letter-spacing: -0.05em
+            color: #ffffff
+    &_top
+        padding:
+            top: 114px
+            left: 137px
+        font-size: 202.2px
+        line-height: 0.8
+        font-weight: 700
+        letter-spacing: -0.05em
+        color: #ffffff
+        &::first-letter
+            color: $goldColor
+    &_text
+        @include allText(#ffffff, 17px , 400)
+        padding:
+            left: 144px
+            top: 22px
+            bottom: 30px
+        &::first-letter
+            color: $goldColor
+    &_download
+        @include allText($goldColor, 17px, 400)
+        line-height: 1.2
+        padding-bottom: 45px
+        padding-left: 145px
+        a
+            color: $goldColor
+            text-decoration: none
+            &:hover
+                color: darken($goldColor, 10%)
+            &:active
+                color: lighten($goldColor, 20%)
+
+.we_gold
+    color: $goldColor
+
+.all_content
+    background-color: $BGcolor
+    max-width: 1400px
+
+.main_content
+    margin: 0 101px
+    background-color: #ffffff
+
+.about
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &_right
+        padding-left: 20px
+
+.about_left
+    @include text_underlined(180px, 295px, 133px)
+
+.about_right
+    position: relative
+    &::after
+        position: absolute
+        top: 50px
+        left: 0
+        content: ""
+        height: 133px
+        width: 1px
+        background: #c5c5c5
+.about_top
+    margin:
+        top: 72px
+        left: 140px
+    @include allText($greyTitle, 30px, 600)
+    line-height: 0.8
+    &::first-letter
+        font-size: 50px
+    &_sub
+        @include allText($darkColor, 80px, 600)
+        line-height: 0.8
+        margin-left: 140px
+        max-width: 455px
+        position: relative
+        &::first-letter
+            color: $goldColor
+
+.about_parag_top
+    @include allText($darkColor, 16px, 400)
+    line-height: 1.2
+    font-style: italic
+    max-width: 610px
+    margin-top: 37px
+.about_paragraph
+    @include paragraphMediumGrey
+
+.about_items
+    margin:
+        top: 74px
+        left: 125px
+        right: 125px
+    &_block
+        width: 231px
+        text-align: center
+        margin-bottom: 111px
+        &_logo
+            width: 57px
+            height: 57px
+            background-color: #e8e8e8
+            border: 2.0px solid #ffa800
+            border-radius: 50%
+            text-align: center
+            padding-top: 12px
+            margin-left: 87px
+        &_top
+            @include allText($darkColor, 18px, 400)
+            padding-top: 24px
+        &_text
+            @include allText($darkColor, 10px, 400)
+            font-style: italic
+            padding-top: 19px
+.featured
+    margin-left: 75px
+.featured_text
+    display: flex
+    @include text_underlined(60px, 124px, 133px)
+    &_left
+        @include allText($darkColor, 30px, 600)
+        &::first-letter
+            color: $goldColor
+            font-size: 50px       
+    &_right
+        @include allText($darkColor, 30px, 600)
+        &::first-letter
+            font-size: 50px
+
+.featured_nav
+    display: flex
+    flex-wrap: wrap
+    list-style-type: none
+    padding: 0
+    &_list a
+        margin-right: 10px
+        text-decoration: none
+        padding: 10px
+        @include allText(#101010, 9px, 600)
+        position: relative
+        &::after
+            position: absolute
+            left: 13px
+            content: ''
+            display: block
+            width: 45%
+            height: 1px
+            background-color: $goldColor
+            transform: translateY(1px) scale(0)
+            transition: all 0.6s
+        &:hover
+            text-decoration
+            &::after
+                transform: translateY(1px) scale(1)
+
+.first
+    margin-right: 30px
+
+.featured_img
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding-bottom: 66px
+
+.process
+    margin: 
+        left: 75px
+        right: 60px
+    padding-bottom: 64px
+    &_text
+        display: flex
+        @include text_underlined(60px, 115px, 133px)
+        &_left
+            @include allText($darkColor, 30px, 600)
+            &::first-letter
+                color: $goldColor
+                font-size: 50px       
+        &_right
+            @include allText($darkColor, 30px, 600)
+            &::first-letter
+                font-size: 50px
+        &_paragraph
+            @include allText($greyColor, 14px, 400)
+            margin:
+                top: 22px
+                bottom: 43px
+            &_bold
+                @include allText($darkColor, 16px, 400)
+                font-style: italic
+
+.process_about
+    margin-left: 89px
+    &_item
+        display: flex
+        flex-wrap: wrap
+        &_container
+            flex-basis: 430px
+            &_top
+                display: flex
+                margin:
+                    top: 29px
+                    bottom: 35px
+            &_left
+                @include allText(#1d1d1d, 30px, 600)
+                line-height: 0.8
+                &::first-letter
+                    font-size: 50px
+            &_right
+                @include allText(#1d1d1d, 30px, 600)
+                line-height: 0.8
+                &::first-letter
+                    font-size: 50px
+            &_middle_text
+                @include allText($darkColor, 16px, 400)
+                margin-bottom: 20px
+                font-style: italic
+            &_bottom_text
+                @include allText($greyColor, 14px, 400)
+                
+.revers
+    display: flex
+    flex-direction: row-reverse
+    flex-wrap: wrap
+    justify-content: flex-end
+.process_about_item_1
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+.method_text
+    margin-bottom: 66px
+.outcom_text
+    margin-top: 100px
+.full
+    flex-basis: 500px
+.fixed
+    padding: 0 20px 0 45px
+
+.services
+    background-image: url(../img/services_bg.png)
+    background-repeat: no-repeat
+    display: flex
+    height: 478px
+    &_content
+        display: flex
+        &_left
+            width: 252px
+            display: flex
+            margin: 
+                top: 41px
+                left: 50px
+                right: 173px
+            @include text_underlined(60px, 123px, 133px)
+            &_left_text
+                @include allText(#ffffff, 30px, 600)
+                &::first-letter
+                    color: $goldColor
+                    font-size: 50px       
+            &_right_text
+                @include allText(#ffffff, 30px, 600)
+                &::first-letter
+                    font-size: 50px
+        &_right
+            display: flex
+            flex-wrap: wrap
+            margin-top: 132px
+            &_about
+                width: 235px
+                height: 110px
+                &_top
+                    @include allText(#ffffff, 18px, 400)
+                    padding-bottom: 26px
+                &_paragraph
+                    @include allText(#ffffff, 11px, 400)
+                    line-height: 1.2
+            &_about_right
+                margin-left: 91px
+                width: 235px
+                height: 110px
+                &_top
+                    @include allText(#ffffff, 18px, 400)
+                    padding-bottom: 26px
+                &_paragraph
+                    @include allText(#ffffff, 11px, 400)
+                    line-height: 1.2
+.team
+    &_content
+        display: flex
+        padding-bottom: 151px
+        &_left
+            display: flex
+            margin: 
+                top: 99px
+                left: 50px
+                right: 146px
+            @include text_underlined(55px, 70px, 85px)
+            &_left_text
+                @include allText($darkColor, 30px, 600)
+                &::first-letter
+                    color: $goldColor
+                    font-size: 50px       
+            &_right_text
+                @include allText($darkColor, 30px, 600)
+                &::first-letter
+                    font-size: 50px
+        &_right
+            &_text
+                margin: 
+                    top: 85px
+                    bottom: 35px
+                    right: 180px
+                &_darck
+                    @include allText(#000000, 16px, 400)
+                    font-style: italic
+                    margin-bottom: 20px
+                    line-height: 1.2
+                &_light
+                    @include allText(#595959, 14px, 400)
+
+.members
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &:last-child
+        margin-right: 69px
+    &_name
+        text-align: center
+        @include allText(#000000, 16px, 600)
+        line-height: 1.2
+        margin-top: 16px
+    &_position
+        text-align: center
+        @include allText(#000000, 16px, 400)
+        line-height: 1.2
+        font-style: italic
+    
+.testimonial
+    color: #ffffff
+    background-color: #000000
+    padding-bottom: 134px
+    &_top
+        @include allText(#ffffff, 30px, 600)
+        padding-top: 55px
+        padding-left: 49px
+        @include text_underlined(117px, 147px, 84px)
+        &::first-letter
+            font-size: 50px
+            color: $goldColor
+    &_main
+        display: flex
+        margin:
+            left: 91px
+    &_text
+        @include allText(#ffffff, 16px, 400)
+        width: 670px
+        margin-top: 84px
+        &_top
+            font-style: italic
+            margin-bottom: 20px
+        &_bottom
+            font-size: 14px
+    &_person
+        margin:
+            left: 84px
+        &_block
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: $goldColor
+            width: 127px
+            height: 127px
+            border-radius: 50%
+            margin:
+                top: 10px
+                right: 10px
+        &_img
+            width: 121px
+            height: 121px
+        &_name
+            text-align: center
+            @include allText(#ffffff, 16px, 600)
+            line-height: 1.2
+            margin-top: 26px
+        &_position
+            text-align: center
+            @include allText(#ffffff, 16px, 400)
+            line-height: 1.2
+            font-style: italic
+
+.blogs
+    display: flex
+    justify-content: space-between
+    padding-bottom: 115px
+    &_left
+        margin: 
+            left: 58px
+            top: 60px
+        &_top
+            @include allText(#000000, 30px, 600)
+            @include text_underlined(58px, 5px, 84px)
+            &::first-letter
+                font-size: 50px
+                color: $goldColor
+        &_menu
+            margin-left: 85px
+            margin-top: 50px
+            width: 180px
+    &_menu
+        list-style-type: none
+        padding-left: 0
+        &_list
+            
+            &:hover
+                transform: translateX(-10px)
+                transition: all 0.3s 
+        &_link
+            padding: 10px 0
+            color: $darkColor
+            display: block
+            @include allText(#000000, 18px, 400)
+            &:hover
+                color: $goldColor
+                text-decoration: none
+            &:active
+                color: darken($goldColor, 10%)
+                font-size: 16px
+    &_right
+        display: flex
+        flex-wrap: wrap
+        margin-top: 30px
+        &_blocks
+            width: 186px
+            &:nth-child(1)
+                margin-right: 78px
+            &:nth-child(2)
+                margin-right: 104px
+            &:last-child
+                margin-right: 54px
+            &_date
+                margin-top: 10px
+            &_date a
+                @include allText($goldColor, 18px, 400)
+                text-decoration: none
+                &:hover
+                    color: darken($goldColor, 10%)
+            &_short
+                @include allText(#000000, 15px, 700)
+                margin-top: 20px
+                
+            &_detailed
+                @include allText(#000000, 12px, 400)
+                font-style: italic
+                margin-top: 15px
+
+.contact
+    background-image: url(/img/contactBG.png)
+    background-repeat: no-repeat
+    max-width: 1198px
+    height: 684px
+    position: relative
+    &_left
+        position: relative
+        &_pointer
+            width: 57px
+            height: 57px
+            background-color: #000000
+            border-radius: 50%
+            border: 2px solid $goldColor
+            position: absolute
+            top: 319px
+            left: 243px
+            display: flex
+            justify-content: center
+            align-items: center
+            &_text
+                letter-spacing: -0.05em
+                @include allText(#ffffff, 14.4px, 700)
+                &::first-letter
+                    color: $goldColor
+    &_right
+        position: absolute
+        top: 52px
+        left: 576px
+        padding-bottom: 28px
+        border-bottom: 3px solid #ffffff
+        &_top
+            display: flex
+            &_left
+                @include allText(#ffffff, 30px, 600)
+                &::first-letter
+                    color: $goldColor
+                    font-size: 50px
+            &_right
+                @include allText(#ffffff, 30px, 600)
+                position: relative
+                &::after
+                    position: absolute
+                    top: 56px
+                    left: -115px
+                    content: ""
+                    width: 172px
+                    background: #c5c5c5
+                    height: 2px
+                &::first-letter
+                    color: #ffffff
+                    font-size: 50px
+    &_form
+        margin-top: 24px
+        &_pers
+            display: flex
+            margin:
+                top: 18px
+                bottom: 12px
+    &_location
+        margin-top: 42px
+        a
+            font-size: 16px
+            line-height: 1.2
+            font-weight: 600
+            color: #ffffff
+            text-decoration: none
+            &:active
+                color: $goldColor
+    &_information
+        display: flex
+        margin-top: 36px
+    &_data
+        margin-right: 22px
+        &_left
+            font-size: 16px
+            line-height: 1.2
+            font-weight: 600
+            color: #ffffff
+            margin-bottom: 18px
+        &_right
+            font-size: 12px
+            line-height: 1.2
+            font-weight: 400
+            color: #ffffff
+            &:nth-child(1)
+                margin-top: 4px
+            &:nth-child(2)
+                margin-top: 23px
+            &:nth-child(3)
+                margin-top: 21px
+            a
+                color: #ffffff
+                text-decoration: none
+.social
+        position: absolute
+        left: 576px
+        top: 621px
+        display: flex
+        &_link
+            margin-right: 5px
+            margin-top: 10px
+            font-size: 10px
+        &_link a
+            display: block
+            width: 19px
+            height: 19px
+            background-color: #ffffff
+            border-radius: 50%
+            color: #2046b3
+            text-align: center
+            padding-top: 2px
+            &:hover
+                background-color: $goldColor
+
+input[type = text]
+    width: 412px
+    height: 35px
+    border: 3px solid #ffffff
+    background: none
+    padding: 0 10px
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 600
+    color: #ffffff
+    &::placeholder
+        color: #ffffff
+
+input[type = tel]
+    width: 159px
+    height: 35px
+    border: 3px solid #ffffff
+    background: none
+    padding: 0 10px
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 600
+    color: #ffffff
+    &::placeholder
+        color: #ffffff
+
+input[type = email]
+    width: 206px
+    height: 35px
+    border: 3px solid #ffffff
+    background: none
+    padding: 0 10px
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 600
+    color: #ffffff
+    margin-left: 44px
+    &::placeholder
+        color: #ffffff
+
+textarea[name = textarea]
+    width: 412px
+    height: 76px
+    border: 3px solid #ffffff
+    background: none
+    padding: 11px 10px 0 10px
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 600
+    color: #ffffff
+    &::placeholder
+        color: #ffffff
+
+input[type = submit]
+    margin-top: 22px
+    background-color: $goldColor
+    width: 108px
+    height: 33px
+    border: none
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 600
+    color: #000000
+    &:focus
+        box-shadow: 4px 4px 52px 7px rgba(0, 0, 0, 0.53)
+        outline: none
+
+.down
+    background-image: url(/img/footerBG.png)
+    height: 654px
+    margin-top: 70px
+    display: flex
+    position: relative
+    &_social
+        width: 130px
+        display: flex
+        border-top: 2px solid $goldColor
+        padding-top: 10px
+        &_link
+            margin-right: 5px
+            margin-top: 10px
+            font-size: 10px
+        &_link a
+            display: block
+            width: 19px
+            height: 19px
+            background-color: #ffffff
+            border-radius: 50%
+            color: #000000
+            text-align: center
+            padding-top: 2px
+            &:hover
+                background-color: $goldColor
+.left_block
+    margin-top: 122px
+    margin-left: 26px
+    &_header
+        @include allText(#ffffff, 60px, 700)
+        letter-spacing: -0.05em
+        &::first-letter
+            color: $goldColor
+            font-size: 60px
+.right_block
+    position: absolute
+    top: 345px
+    left: 346px
+    &_text
+        font-size: 110.8px
+        line-height: 88px
+        font-weight: 700
+        letter-spacing: -0.05em
+        color: #ffffff
+    
+.down_menu
+    list-style-type: none
+    margin-left: -40px
+    margin-top: 40px
+    margin-bottom: 20px
+    &_list
+        &:hover
+            transform: translateX(-10px)
+            transition: all 0.3s
+    &_link
+        display: block
+        color: #ffffff
+        font-size: 16px
+        line-height: 36px
+        font-weight: 600
+        &:hover
+            text-decoration: none
+            color: $goldColor
+
+
+
+/*Медиа_запрос*/
+@media all and ( max-width: 1274px)
+    .about_right
+        left: 10px
+    .team_content_right_text
+        margin-right: 25px
+
+@media all and ( max-width: 1369px)
+    .about_items_block
+        margin-bottom: 30px
+
+@media all and (max-width: 845px)
+    .testimonial_main
+        flex-wrap: wrap
+    .testimonial_text
+        margin-right: 91px
+    .main_page_top
+        font-size: 150px
+        padding-top: 154px
+        text-align: center
+        margin-left: -160px
+    .main_page_text
+        text-align: center
+        margin-left: -160px
+    .main_page_download
+        text-align: center
+        margin-left: -160px
+    .main_page_content,
+    .main_content
+        margin: 0 50px
+    .about_top
+        margin-left: 33%
+    .about_top_sub
+        margin-left: 33%
+    .about_left
+        &::after
+            display: none
+    .about_right
+        &::after
+            display: none
+    .process_about
+        margin-left: 0
+
+@media all and ( max-width: 1252px )
+    .services_content
+        display: block
+    .services_content_right_about
+        margin-left: 91px
+    .services_content_right
+        margin-top: 15px
+    .services_content_right_about_top
+        padding-bottom: 5px
+@media all and ( max-width: 868px )
+    .services_content_right_about,
+    .services_content_right_about_right
+        margin-left: 50px
+    
+@media all and ( max-width: 1000px )
+    .team_content
+        display: block
+        margin-left: 15px
+        &:last-child
+            margin-right: 0px
+    .team_content_right_text
+        margin: 25px 15px

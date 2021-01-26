@@ -1,0 +1,113 @@
+.footer
+    background: $bg_footer
+    &__form
+        display: flex
+        flex-direction: column
+    &__top
+        padding: 13px 0 13px 0
+        border-bottom: 1px solid #C4C4C4
+    &__heading
+        font-size: 18px
+        line-height: 22px
+        margin-bottom: 10px
+    &__input
+        width: 290px
+        height: 40px
+        border: 1px solid $darkgrey
+        box-sizing: border-box
+        border-radius: 30px
+        padding: 0 24px 0 24px
+        font-size: 14px
+        line-height: 17px
+        color: $darkgrey
+        &:focus
+            outline: none
+        &::placeholder
+            font-size: 14px
+            line-height: 17px
+            color: $darkgrey
+    &__btn
+        @include blue_link_btn(290px, 40px, center)
+        border: none
+        font-weight: bold
+        margin: 10px 0 10px 0
+        &:focus
+            outline: none
+        &:hover
+            cursor: pointer
+        &_hide
+            display: none
+
+.footer__check
+    margin-top: 7px
+    display: flex
+    align-items: center
+.guest__checks
+    position: relative
+    margin-left: -5px
+    font-size: 10px
+    line-height: 12px
+    color: #9E9E9E
+    top: -9px
+
+
+
+.footer__menu
+    display: flex
+    justify-content: space-between
+    padding-top: 24px
+    padding-bottom: 25px
+    border-bottom: 1px solid #C4C4C4
+    &__logo img
+        width: 100px
+        height: 29px
+
+
+.fa-times
+    font-size: 35px
+
+.darck
+    color: #363636
+    
+#switch
+    position: absolute
+    visibility: hidden
+    left: -9999999px
+    &:checked ~ .navs
+        left: 0
+
+.opens
+    color: $white
+    font-size: 30px
+
+.menus
+    display: flex
+    flex-direction: column
+    justify-content: center
+.navs
+    position: fixed
+    bottom: 0
+    left: 100%
+    width: 100%
+    height: 300px
+    background: $bg_footer
+    transition: all .4s
+    padding-top: 6px
+    padding-left: 23px
+    &__closed
+        position: absolute
+        top: 190px
+        right: 24px
+        color: $darkgrey
+        font-size: 24px
+
+.copyright
+    display: flex
+    justify-content: space-between
+    padding: 18px 0 18px 0
+    &__font
+        font-size: 8px
+        line-height: 10px
+.hidden
+    display: none
+    

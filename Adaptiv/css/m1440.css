@@ -1,0 +1,35 @@
+@media (min-width: 1440px) {
+  .center {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+
+  .nav {
+    margin-left: 140px;
+  }
+
+  .box__top {
+    width: 700px;
+  }
+
+  .send {
+    height: 457px;
+    align-items: center;
+  }
+  .send__top {
+    position: unset;
+    width: 460px;
+  }
+  .send__parag {
+    margin-top: 22px;
+  }
+  .send__img {
+    width: 660px;
+    height: 335px;
+  }
+}
+@media (min-width: 1600px) {
+  .send {
+    flex-direction: row;
+  }
+}

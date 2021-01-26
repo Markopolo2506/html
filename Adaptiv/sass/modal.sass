@@ -1,0 +1,87 @@
+
+@media (min-width: 1440px)
+    .modalDialog
+        position: fixed
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: rgba(0, 0, 0, 0.2)
+        backdrop-filter: blur(15px)
+        z-index: 99999
+        -webkit-transition: opacity 400ms ease-in
+        -moz-transition: opacity 400ms ease-in
+        transition: opacity 400ms ease-in
+        display: none
+        pointer-events: none
+
+
+    .modalDialog:target
+        display: block
+        pointer-events: auto
+
+
+    .modal
+        width: 440px
+        height: 336px
+        position: relative
+        margin: 10% auto
+        padding: 67px 40px 47px 40px
+        border-radius: 32px
+        background: $white
+        &__close
+            color: $darkblue
+            position: absolute
+            text-decoration: none
+            top: 20px
+            right: 20px
+            font-weight: bold
+            padding: 5px
+            &:hover
+                color: $orange
+            &:active
+                color: darken($orange, 15%)
+        &__heading
+            font-size: 17px
+            line-height: 21px
+            padding-bottom: 29px
+        &__name
+            border: 1px solid $darkblue
+            box-sizing: border-box
+            border-radius: 30px
+            width: 360px
+            height: 48px
+            padding: 0 21px 0 21px
+            color: darken($orange, 15%)
+            margin-bottom: 13px
+            text-transform: capitalize
+            &::placeholder
+                font-size: 16px
+                line-height: 19px
+                color: $darkblue
+            &:focus
+                outline: none
+        &__tel
+            border: 1px solid $darkblue
+            box-sizing: border-box
+            border-radius: 30px
+            width: 360px
+            height: 48px
+            padding: 0 21px 0 21px
+            color: darken($orange, 15%)
+            margin-bottom: 13px
+            &::placeholder
+                font-size: 16px
+                line-height: 19px
+                color: $darkblue
+            &:focus
+                outline: none
+        &__btn
+            @include blue_link_btn(360px, 48px, center)
+            font-weight: bold
+            border: none
+            &:focus
+                outline: none
+            &:hover
+                cursor: pointer
+

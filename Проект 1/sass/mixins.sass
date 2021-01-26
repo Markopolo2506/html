@@ -1,0 +1,157 @@
+@mixin bigText
+    font-family: Montserrat
+    font-size: 62px
+    line-height: 72px
+    font-weight: 100
+    text-transform: uppercase
+    color: #212121
+    margin: 0
+
+@mixin paragaph ($font-size, $line-height)
+    font-family: Montserrat
+    font-size: $font-size
+    line-height: $line-height
+    font-weight: 300
+    color: #6c6c6c
+    margin: 0
+    padding-top: 30px
+
+@mixin topText ($color)
+    font-family: Montserrat
+    font-size: 18px
+    line-height: 48px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    color: $color
+    height: 13px
+
+@mixin btnBig 
+    color: $grey
+    font-size: 18px
+    font-weight: 700
+    text-transform: uppercase
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35)
+    border-radius: 23px
+    background-color: #ffffff
+    display: inline-block
+    width: 212px
+    height: 45px
+    text-align: center
+    line-height: 45px
+    letter-spacing: 3.6px
+    margin-top: 32px
+    &:hover
+        color: $darck
+        text-decoration: none
+    &:active
+        color: lighten($darck, 25%)
+
+@mixin btnRound
+    width: 48px
+    height: 48px
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35)
+    border-radius: 24px
+    background-color: #ffffff
+    display: inline-block
+    color: $grey
+    padding-top: 8px
+    &:hover
+        color: $darck
+    &:active
+        color: lighten($darck, 25%)
+
+@mixin explore
+    width: 158px
+    height: 13px
+    font-family: Montserrat
+    font-size: 18px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+    letter-spacing: 3.6px
+    width: 195px
+    a
+        text-decoration: none
+        color: $grey
+        &:hover
+            color: $darck
+
+@mixin exclusive_text
+    color: #212121
+    font-family: Montserrat
+    font-size: 36px
+    font-weight: 700
+
+@mixin footer_little_text
+    color: #212121
+    font-family: Montserrat
+    font-size: 14px
+    font-weight: 300
+    line-height: 22px
+
+@mixin footer_bold_text
+    color: #212121
+    font-family: Montserrat
+    font-size: 14px
+    font-weight: 700
+    line-height: 26px
+    text-transform: uppercase
+    letter-spacing: 0.7px
+    &:hover
+        color: $grey
+    &:active
+        color: darken($grey, 20%)
+
+@mixin footer_copyright_text
+    color: #6c6c6c
+    font-family: Montserrat
+    font-size: 12px
+    font-weight: 700
+    line-height: 26px
+    text-transform: uppercase
+    letter-spacing: 0.6px
+
+@mixin footer_top
+    color: #6c6c6c
+    font-family: Montserrat
+    font-size: 18px
+    font-weight: 700
+    line-height: 24px
+    text-transform: uppercase
+    letter-spacing: 1.8px
+
+@mixin contBigText
+    color: #212121
+    font-family: Montserrat
+    font-size: 62px
+    font-weight: 200
+    line-height: 72px
+        
+@mixin boldTextContGrey($color)
+    color: $color
+    font-family: Montserrat
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+
+@mixin buy_btn
+    width: 510px
+    height: 71px
+    box-shadow: 0 2px 5px 1px rgba(33, 33, 33, 0.35)
+    border-radius: 35px
+    background-color: #f44336
+    font-family: Montserrat
+    font-size: 22px
+    font-weight: 700
+    line-height: 24.01px
+    text-transform: uppercase
+    letter-spacing: 4.4px
+    display: inline-block
+    color: #ffffff
+    padding-top: 23px
+    &:active
+        background-color: darken(#f44336, 10%)
+    &:hover
+        color: $grey
+        text-decoration: none
