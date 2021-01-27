@@ -1,0 +1,13 @@
+.heading {
+    color: red;
+}
+
+.card {
+    margin-bottom: 32px;
+}
+
+.block {
+    height: 200px;
+    border: 1px solid #000;
+    width: 100px;
+}

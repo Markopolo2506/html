@@ -1,0 +1,13 @@
+@mixin bradius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin font($size, $color) {
+    font-family: sans-serif;
+    color: $color;
+    font-size: $size;
+    font-weight: normal;
+    font-style: normal;
+}
