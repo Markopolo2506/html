@@ -1,0 +1,45 @@
+@mixin link_style($color, $font-size, $line-height, $font-weight)
+    font-size: $font-size
+    line-height: $line-height
+    font-weight: $font-weight
+    text-transform: uppercase
+    color: $color
+
+@mixin top_text_style($color, $font-size, $line-height, $font-weight, $letter-spacing)
+    font-size: $font-size
+    line-height: $line-height
+    font-weight: $font-weight
+    letter-spacing: $letter-spacing
+    color: $color
+
+@mixin buttonStyle($width, $height,$background-color, $font-weight, $line-height, $font-size)
+    width: $width
+    height: $height
+    background-color: $background-color
+    font-size: $font-size
+    line-height: $line-height
+    font-weight: $font-weight
+    letter-spacing: 0.025em
+    color: #ffffff
+
+@mixin logo
+    margin-top: 32px
+    a
+        display: flex
+        align-items: flex-end
+        text-decoration: none
+        @include link_style($dark, 27px, 32px, 300)
+        letter-spacing: 0.025em
+        text-transform: uppercase
+    &_img
+        padding-right: 10px
+        
+@mixin colm
+    margin: 
+        left: 230px
+        right: 203px
+        
+@mixin center
+    padding: 
+        left: 230px
+        right: 230px
